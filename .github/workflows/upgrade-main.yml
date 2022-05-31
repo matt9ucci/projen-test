@@ -1,7 +1,6 @@
 name: upgrade-main
 on:
   workflow_dispatch: {}
-  schedule: []
 jobs:
   upgrade:
     name: Upgrade
@@ -55,4 +54,3 @@ jobs:
         run: |-
           git config user.name \\"github-actions\\"
           git config user.email \\"github-actions@github.com\\"
-
