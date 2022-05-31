@@ -55,31 +55,4 @@ jobs:
         run: |-
           git config user.name \\"github-actions\\"
           git config user.email \\"github-actions@github.com\\"
-      - name: Create Pull Request
-        id: create-pr
-        uses: peter-evans/create-pull-request@v3
-        with:
-          token: \${{ secrets.PROJEN_GITHUB_TOKEN }}
-          commit-message: |-
-            chore(deps): upgrade dependencies
 
-            Upgrades project dependencies. See details in [workflow run].
-
-            [Workflow Run]: https://github.com/\${{ github.repository }}/actions/runs/\${{ github.run_id }}
-
-            ------
-
-            *Automatically created by projen via the \\"upgrade-main\\" workflow*
-          branch: github-actions/upgrade-main
-          title: \\"chore(deps): upgrade dependencies\\"
-          body: |-
-            Upgrades project dependencies. See details in [workflow run].
-
-            [Workflow Run]: https://github.com/\${{ github.repository }}/actions/runs/\${{ github.run_id }}
-
-            ------
-
-            *Automatically created by projen via the \\"upgrade-main\\" workflow*
-          author: github-actions <github-actions@github.com>
-          committer: github-actions <github-actions@github.com>
-          signoff: true
